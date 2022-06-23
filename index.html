@@ -4,40 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="stylesheet" href="style.css">
     <title>Sign Up Form</title>
 </head>
 <body>
     <section class="logo-section">
-        <div class="logo">🐱‍👤 NEWT</div>
-        <p class="image-credit">Photo by Matheus Rodrigues</p>
+        <div class="logo"><span class="material-symbols-outlined">
+            forest
+            </span> WOUD</div>
+        <p class="image-credit">Photo by Michael Krahn</p>
     </section>
     <section class="general-form-section">
         <div class="text-section">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime saepe placeat iusto odio qui molestiae ducimus alias, consequatur eos commodi ad ratione quas voluptatem possimus odit rem doloremque, esse repellat.
-           Facilis, porro quaerat labore aspernatur quibusdam sit quasi quas, doloremque culpa non necessitatibus officia sed dignissimos placeat! Repudiandae ullam exercitationem recusandae fugit amet? Veniam vel sapiente minus cum odio consequuntur. 
+           <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+           <p>Sign up <em>now</em> to get started.</p>
+           <p>You <em>know</em> you want to.</p> 
         </div>
-        <form action="" class="form-section">
+        <form action="" class="form-section" id="register" onsubmit="return false">
             <p>Let's do this!</p>
             <div class="form-container">
-                <label for="firstName">First Name</label>
-                <input type="text" name="registration" id="firstName">
-                <label for="email">Email</label>
-                <input type="email" name="registration" id="email">
-                <label for="password">Password</label>
-                <input type="password" name="registration" id="password">
-                <label for="lastName">Last Name</label>
-                <input type="text" name="registration" id="lastName">
-                <label for="phoneNumber">Phone number</label>
-                <input type="tel" name="registration" id="phoneNumber">
-                <label for="passwordConfirm">Confirm password</label>
-                <input type="password" name="registration" id="passwordConfirm">
+                <div class="left-form-container">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="registration" id="firstName">
+                    <label for="email">Email</label>
+                    <input type="email" name="registration" id="email">
+                    <label for="password">Password</label>
+                    <input type="password" name="registration" id="password">
+                    <p id="passwordError" class="password-error"></p>
+                </div>
+                <div class="right-form-container">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="registration" id="lastName">
+                    <label for="phoneNumber">Phone number</label>
+                    <input type="tel" name="registration" id="phoneNumber">
+                    <label for="passwordConfirm">Confirm password</label>
+                    <input type="password" name="registration" id="passwordConfirm">
+                    <p class="password-error"></p>
+                </div>
             </div>
         </form>
+        
         <div class="button-info">
-            <button class="btn-submit">Create Account</button>
+            <button type="submit" id="submitButton" class="btn-submit" form="register">Create Account</button>
             <p class="btn-info-text">Already have an account? <a href="#">Log in</a></p>
         </div>
     </section>
 </body>
 </html>
+
+
+
