@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
 
+:root{
+    --valid-color: #28f702;
+    --invalid-color: #f81515;
+    --focus-color: #310ecc;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -60,7 +67,7 @@ body {
 
 .form-section{
     width: 100%;
-    height: 40%;
+    height: 50%;
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
@@ -72,19 +79,30 @@ body {
 input{
     margin: 0 0 12px 0;
     width: 70%;
-    height: 15%;
+    height: 12%;
     border: 1px solid #E5E7EB;
     border-radius: 3px;  
 }
 
 input:focus{
-    border: 2px solid rgb(49, 14, 204);
+    border: 2px solid var(--focus-color);
     outline: none;
 }
 
+input:not(:focus):not(:placeholder-shown):invalid{
+    border: 2px solid var(--invalid-color);
+    outline: none;
+}
+
+input:not(:focus):not(:placeholder-shown):valid{
+    border: 2px solid var(--valid-color);
+    outline: none;
+}
+
+
 label {
     width: 70%;
-    height: 10%;
+    height: 9%;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.8rem;
@@ -98,8 +116,8 @@ label {
     display: flex;
     flex-flow: row;
     width: 70%;
-    height: 65%;
-    margin-top: 18px;
+    height: 80%;
+    margin-top: 0;
 }
 
 .left-form-container, .right-form-container{
@@ -109,10 +127,8 @@ label {
 }
 
 
-
-
 .text-section{
-    margin: 10% 0 5% 0;
+    margin: 5% 0 2% 0;
     width: 80%;
     font-size: 1.3rem;
     font-weight: bold;
@@ -130,7 +146,7 @@ label {
 }
 
 .btn-info-text{
-    margin-top: 24px;
+    margin-top: 1.0rem;
     font-size: 0.8rem;
     font-weight: 700;
 }
@@ -166,9 +182,26 @@ a:link, a:visited {
     color: #596D48;
 }
 
-.password-error {
-    width: 60%;
+.error-text {
+    width: 100%;
     height: 8%;
     /* border: 1px solid red; */
+    font-size: 0.8rem;
+    color: var(--invalid-color);
+    font-style: italic;
 }
 
+.fa-exclamation-triangle{
+    margin-right: 0.5rem;
+    font-size: 1.0rem;
+}
+
+.password-error{
+    display: inline-block;
+    width: 50%;
+    height: 8%;
+    /* border: 1px solid red; */
+    font-size: 0.8rem;
+    color: var(--invalid-color);
+    font-style: italic;   
+}

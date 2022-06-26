@@ -14,7 +14,15 @@ submitButton.addEventListener('click', ()=> {
     passwordValue = password.value;
     passwordConfirmValue = passwordConfirm.value;
     if(passwordValue !== passwordConfirmValue){
-        passwordError.textContent= "* Passwords do not match";
+        passwordError.textContent= 'Passwords do not match';
     } 
 });
 
+document.addEventListener('invalid', (function(){
+    return function(e) {
+      //prevent the browser from showing default error bubble / hint
+      e.preventDefault();
+      // optionally fire off some custom validation handler
+      // myValidation();
+    };
+})(), true);

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="app.js" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Sign Up Form</title>
 </head>
@@ -15,7 +16,7 @@
             forest
             </span> WOUD</div>
         <p class="image-credit">Photo by Michael Krahn</p>
-    </section>
+    </section>  
     <section class="general-form-section">
         <div class="text-section">
            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
@@ -27,21 +28,26 @@
             <div class="form-container">
                 <div class="left-form-container">
                     <label for="firstName">First Name</label>
-                    <input type="text" name="registration" id="firstName">
+                    <input type="text" name="registration" id="firstName" minlength="2" maxlength="20" pattern="^[a-zA-Z ]*$" placeholder=" " required>
+                    <p class="error-text"><i class="fas fa-exclamation-triangle"></i>First Name must have at least 2 characters.</p>
                     <label for="email">Email</label>
-                    <input type="email" name="registration" id="email">
+                    <input type="email" name="registration" id="email" placeholder=" " required>
+                    <p class="error-text"><i class="fas fa-exclamation-triangle"></i>Your Email must have the pattern: something@something.</p>
                     <label for="password">Password</label>
-                    <input type="password" name="registration" id="password">
+                    <input type="password" name="registration" id="password" placeholder=" " required>    
+                    <p class="password-error"><span><i class="fas fa-exclamation-triangle"></i></span></p>
                     <p id="passwordError" class="password-error"></p>
                 </div>
                 <div class="right-form-container">
                     <label for="lastName">Last Name</label>
-                    <input type="text" name="registration" id="lastName">
+                    <input type="text" name="registration" id="lastName" minlength="2" maxlength="20" pattern="^[a-zA-Z ]*$" placeholder=" " required>
+                    <p class="error-text"><i class="fas fa-exclamation-triangle"></i>Last Name must have at least 2 characters.</p>
                     <label for="phoneNumber">Phone number</label>
-                    <input type="tel" name="registration" id="phoneNumber">
+                    <input type="tel" name="registration" id="phoneNumber" minlength="5" maxlength="15" pattern="^[0-9]" placeholder=" " required>
+                    <p class="error-text"><i class="fas fa-exclamation-triangle"></i>Your Phone number must have a minimum of 5 and a maximum of 15 digits.</p>
                     <label for="passwordConfirm">Confirm password</label>
-                    <input type="password" name="registration" id="passwordConfirm">
-                    <p class="password-error"></p>
+                    <input type="password" name="registration" id="passwordConfirm" placeholder=" " required>
+                    <p class="error-text"></p>
                 </div>
             </div>
         </form>
