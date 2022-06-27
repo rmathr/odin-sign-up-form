@@ -5,6 +5,8 @@
     --valid-color: #28f702;
     --invalid-color: #f81515;
     --focus-color: #310ecc;
+    /* --form-color: #596D48; */
+    --form-color: #7f8f71;
 }
 
 
@@ -72,7 +74,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 18px 0 0 24px;
-    background-color: #596D48;
+    background-color: var(--form-color);
     box-shadow: 0px 2px 5px #888, 0px -2px 5px #888
 }
 
@@ -94,10 +96,15 @@ input:not(:focus):not(:placeholder-shown):invalid{
     outline: none;
 }
 
+input:not(:focus):not(:placeholder-shown):invalid + .error-text{
+    color: var(--invalid-color);
+}
+
 input:not(:focus):not(:placeholder-shown):valid{
     border: 2px solid var(--valid-color);
     outline: none;
 }
+
 
 
 label {
@@ -160,7 +167,7 @@ form p {
 }
 
 .btn-submit {
-    background-color: #596D48;
+    background-color: var(--form-color);
     color: #efefef;
     border: none;
     border-radius: 5px;
@@ -179,7 +186,7 @@ a {
 }
 
 a:link, a:visited {
-    color: #596D48;
+    color: var(--form-color);
 }
 
 .error-text {
@@ -188,7 +195,7 @@ a:link, a:visited {
     /* border: 1px solid red; */
     font-size: 0.8rem;
     color: var(--invalid-color);
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 .fa-exclamation-triangle{
@@ -196,12 +203,25 @@ a:link, a:visited {
     font-size: 1.0rem;
 }
 
+
+
 .password-error{
     display: inline-block;
-    width: 50%;
+    width: 60%;
     height: 8%;
+    margin-left: -33.5%;
     /* border: 1px solid red; */
     font-size: 0.8rem;
     color: var(--invalid-color);
     font-style: italic;   
+}
+
+.password-error-symbol{
+    display: inline-block;
+    width: 40%;
+    height: 8%;
+    /* border: 1px solid red; */
+    font-size: 0.8rem;
+    color: var(--invalid-color);
+    font-style: italic;
 }
