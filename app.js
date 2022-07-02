@@ -15,18 +15,26 @@ const inputsArray = [...inputs];
 let passwordValue;
 let passwordConfirmValue;
 
-submitButton.addEventListener('click', ()=> {
+submitButton.addEventListener('click', validatePassword);
+
+
+function validatePassword(){
     passwordValue = password.value;
     passwordConfirmValue = passwordConfirm.value;
-    if(passwordValue == '' || passwordConfirmValue == '' ){
-        passwordError.textContent= '⚠️ Your Password must not be blank.'; 
-    } else if(passwordValue !== passwordConfirmValue){
-        passwordError.textContent= '⚠️ Passwords do not match.';
-        // passwordErrorSymbol.classList.add('password-error-symbol');
+    let passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if(password.value.match(passRegex) && passwordConfirm.value.match(passRegex)){
+        console.log("Match!");
+        if(passwordValue !== passwordConfirmValue){
+            passwordError.textContent= '⚠️ Passwords do not match.';
+        }
+    } else if (passwordValue == '' || passwordConfirmValue == ''){
+        console.log("It's not a match!");
+        passwordError.textContent= '⚠️ Your Password must not be blank.';
     } else {
-        // passwordErrorSymbol.classList.remove('password-error-symbol');
+        passwordError.textContent= '⚠️ Your Password must have at least 8 digits, 1 uppercase character, 1 number and 1 symbol.';
     }
-});
+}
+
 
 document.addEventListener('invalid', (function(){
     return function(e) {
@@ -74,4 +82,3 @@ inputsArray.forEach(input => {
         console.log(input.id); 
     });
 });
-

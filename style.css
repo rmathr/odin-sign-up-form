@@ -198,30 +198,5 @@ a:link, a:visited {
     /* font-style: italic; */
 }
 
-.fa-exclamation-triangle{
-    margin-right: 0.5rem;
-    font-size: 1.0rem;
-}
 
 
-
-.password-error{
-    display: inline-block;
-    width: 60%;
-    height: 8%;
-    margin-left: -33.5%;
-    /* border: 1px solid red; */
-    font-size: 0.8rem;
-    color: var(--invalid-color);
-    font-style: italic;   
-}
-
-.password-error-symbol{
-    display: inline-block;
-    width: 40%;
-    height: 8%;
-    /* border: 1px solid red; */
-    font-size: 0.8rem;
-    color: var(--invalid-color);
-    font-style: italic;
-}

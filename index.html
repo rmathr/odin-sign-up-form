@@ -34,7 +34,7 @@
                     <input type="email" name="registration" id="email" placeholder=" " required>
                     <p class="error-text"></p>
                     <label for="password">Password</label>
-                    <input type="password" name="registration" id="password" placeholder=" " required>    
+                    <input type="password" name="registration" id="password" placeholder=" " pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>    
                     <p id="passwordError" class="error-text"></p>
                 </div>
                 <div class="right-form-container">
@@ -45,7 +45,7 @@
                     <input type="tel" name="registration" id="phoneNumber" pattern="^[+]?[0-9]{5,15}$" placeholder=" " required>
                     <p class="error-text"></p>
                     <label for="passwordConfirm">Confirm password</label>
-                    <input type="password" name="registration" id="passwordConfirm" placeholder=" " required>
+                    <input type="password" name="registration" id="passwordConfirm" placeholder=" " pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
                     <p class="error-text"></p>
                 </div>
             </div>
