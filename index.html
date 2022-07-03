@@ -28,24 +28,24 @@
             <div class="form-container">
                 <div class="left-form-container">
                     <label for="firstName">First Name</label>
-                    <input type="text" name="registration" id="firstName" minlength="2" maxlength="20" pattern="^[a-zA-Z ]*$" placeholder=" " required>
+                    <input type="text" name="registration" id="firstName" minlength="2" maxlength="20" pattern="^[a-zA-Z ]*$" placeholder=" " required tabindex="1">
                     <p id="firstNameError" class="error-text"></p>
                     <label for="email">Email</label>
-                    <input type="email" name="registration" id="email" placeholder=" " required>
+                    <input type="email" name="registration" id="email" placeholder=" " required tabindex="3">
                     <p class="error-text"></p>
                     <label for="password">Password</label>
-                    <input type="password" name="registration" id="password" placeholder=" " pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>    
+                    <input type="password" name="registration" id="password" placeholder=" " pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required tabindex="5">    
                     <p id="passwordError" class="error-text"></p>
                 </div>
                 <div class="right-form-container">
                     <label for="lastName">Last Name</label>
-                    <input type="text" name="registration" id="lastName" minlength="2" maxlength="20" pattern="^[a-zA-Z ]*$" placeholder=" " required>
+                    <input type="text" name="registration" id="lastName" minlength="2" maxlength="20" pattern="^[a-zA-Z ]*$" placeholder=" " required tabindex="2">
                     <p class="error-text"></p>
                     <label for="phoneNumber">Phone number</label>
-                    <input type="tel" name="registration" id="phoneNumber" pattern="^[+]?[0-9]{5,15}$" placeholder=" " required>
+                    <input type="tel" name="registration" id="phoneNumber" pattern="^[+]?[0-9]{5,15}$" placeholder=" " required tabindex="4">
                     <p class="error-text"></p>
                     <label for="passwordConfirm">Confirm password</label>
-                    <input type="password" name="registration" id="passwordConfirm" placeholder=" " pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+                    <input type="password" name="registration" id="passwordConfirm" placeholder=" " pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required tabindex="6">
                     <p class="error-text"></p>
                 </div>
             </div>

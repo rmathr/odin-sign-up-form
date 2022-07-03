@@ -31,7 +31,7 @@ function validatePassword(){
         console.log("It's not a match!");
         passwordError.textContent= '⚠️ Your Password must not be blank.';
     } else {
-        passwordError.textContent= '⚠️ Your Password must have at least 8 digits, 1 uppercase character, 1 number and 1 symbol.';
+        passwordError.textContent= '⚠️ Your Password must be at least 8 characters long, contain at least 1 number, 1 symbol and 1 uppercase character.';
     }
 }
 
